@@ -1,0 +1,36 @@
+// 기본 셋팅
+$body-base-font: 'GmarketSansMedium', 'NotoSansKR', arial, sans-serif, Arial, dotum, '돋움';
+$body-light-font: 'GmarketSansLight', 'NotoSansKR', arial, sans-serif, Arial, dotum, '돋움';
+$body-bold-font: 'GmarketSansBold', 'NotoSansKR', arial, sans-serif, Arial, dotum, '돋움';
+$body-font-color: #000;
+$base-font-size: 22px;
+$line-height: 1;
+
+// base color
+$primary: #2546cd;
+$dark: #222;
+$warning: #ff9582;
+$slightly: #888;
+$lightSlightly: #999;
+$danger: #e0012b;
+
+// point color
+$blue: #a0afc1;
+$navy: #1d0f5d;
+$darknavy: #0b0234;
+$lavender: #ddc4ff;
+$purple: #672f96;
+
+// 미디어쿼리 사이즈
+$dt-s: 1360px;
+$tb-l: 1320px;
+$tb-m: 1100px;
+$tb-s: 800px;
+$mo-l: 720px;
+$mo-s: 400px;
+
+// 이미지 url
+$baseUrl: '../images/';
+
+// 공통레이아웃 사이즈
+$layoutSize: 1200px;

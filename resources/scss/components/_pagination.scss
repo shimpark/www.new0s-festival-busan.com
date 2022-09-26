@@ -1,0 +1,38 @@
+$paging-size: 32px;
+$btn-size: 32px;
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: rem(40px);
+  button {
+    display: block;
+  }
+  .paging {
+    @include size(rem($paging-size));
+    margin: 0 rem(5px);
+    border-radius: 4px;
+    font-size: rem(14px);
+    background-color: #fbfbfc;
+    &.current {
+      background-color: $blue;
+      color: #fff;
+    }
+  }
+  .controller {
+    @include size(rem($btn-size));
+    margin: 0 rem(6px);
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: rem(22px) rem(6px);
+    &.prev {
+      background-image: url('../images/components/icon-pagination-prev.png');
+    }
+    &.next {
+      background-image: url('../images/components/icon-pagination-next.png');
+    }
+  }
+}

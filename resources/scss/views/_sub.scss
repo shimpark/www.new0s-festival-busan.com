@@ -1,0 +1,192 @@
+// 서브 scss
+
+//헤더 타이틀
+.header-title-box {
+    padding: rem(80px) 0;
+    text-align: center;
+    @include _background("sub/history-header-title-backround-image.jpg", 50%, 50%);
+    background-size: cover;
+
+    .title {
+        display: inline-block;
+        height: rem(75px);
+
+        img {
+            max-width: initial;
+            width: auto;
+            height: 100%;
+        }
+
+        @media (max-width: $tb-m) {
+            height: rem(55px);
+        }
+        @media (max-width: $mo-l) {
+            height: rem(45px);
+        }
+    }
+
+    @media (max-width: $tb-m) {
+        padding: rem(55px) 0;
+    }
+    @media (max-width: $mo-l) {
+        padding: rem(45px) 0;
+    }
+}
+
+//응모 현황 콘텐츠 영역
+[class^="history-area__"] {
+    padding-top: rem(120px);
+    text-align: center;
+
+    .area-title-box {
+        * {
+            color: $purple;
+        }
+        .title {
+            &::after {
+                background-color: $purple;
+            }
+        }
+    }
+    .area-info {
+        &-box {
+            padding: rem(40px) 0;
+
+            * {
+                line-height: 1.35;
+            }
+            b {
+                font-family: $body-bold-font;
+            }
+
+            @media (max-width: $tb-m) {
+                padding: rem(30px) 0;
+            }
+            @media (max-width: $mo-l) {
+                padding: rem(20px) 0;
+            }
+        }
+        &-cont {
+            padding: rem(40px) 0;
+            font-size: rem(32px);
+            
+            small {
+                font-size: rem(24px);
+
+                @media (max-width: $tb-m) {
+                    font-size: rem(20px);
+                }
+            }
+
+            @media (max-width: $tb-m) {
+                font-size: rem(28px);
+            }
+        }
+    }
+
+    @media (max-width: $tb-m) {
+        padding-top: rem(90px);
+    }
+}
+
+.history-area__result {
+    .area-info {
+        &-cont {
+            .text {
+                &.result {
+                    color: #696969;
+
+                    small {
+                        color: #ff3434;
+                    }
+                }
+            }
+        }
+    }
+    .qr-code {
+        display: block;
+        margin: rem(40px) auto rem(20px);
+        max-width: rem(260px);
+        border: rem(30px) solid $purple;
+    }
+    .map {
+        display: block;
+        margin: rem(60px) auto 0;
+        max-width: rem(770px);
+    }
+}
+
+.history-area__banner {
+    padding: rem(80px) 0;
+
+    .banner-list {
+        a {
+            display: block;
+            margin: rem(15px) 0;
+        }
+    }
+}
+
+//개인정보 처리방침
+.policy {
+    &-area {
+        padding: rem(100px) 0;
+    }
+    &-wrap {
+        margin-top: rem(80px);
+
+        &.area-btn-wrap {
+            text-align: center;
+        }
+    }
+    &-title {
+        font-family: $body-bold-font;
+        font-size: rem(24px);
+        padding-bottom: rem(20px);
+
+        @media (max-width: $mo-l) {
+            font-size: rem(28px);
+            line-height: 1.2;
+        }
+      }
+    &-text {
+        font-size: rem(18px);
+        line-height: 1.7;
+
+        @media (max-width: $mo-l) {
+            font-size: rem(20px);
+        }
+    }
+    &-table {
+        overflow: auto;
+        padding: rem(20px) 0;
+
+        table {
+            table-layout: fixed;
+            width: 100%;
+            min-width: 620px;
+        }
+        th,
+        td {
+            padding: rem(15px) rem(20px);
+            font-size: rem(16px);
+            text-align: center;
+            color: #5d5d5d;
+            border: 1px solid #b7b6b6;
+            word-break: keep-all;
+
+            @media (max-width: $mo-l) {
+                font-size: rem(18px);
+            }
+        }
+        th {
+            background-color: #d5d5d5;
+        }
+        td {
+            line-height: 1.4;
+        }
+        .point {
+            font-family: $body-bold-font;
+        }
+    }
+}

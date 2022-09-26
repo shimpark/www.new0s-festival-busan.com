@@ -1,0 +1,475 @@
+// 메인 scss
+
+//공통
+main {
+    background-color: $purple;
+
+    @media (max-width: $tb-m) {
+        padding-top: rem(100px);
+    }
+    @media (max-width: $tb-s) {
+        padding-top: rem(85px);
+    }
+}
+[class*="main-area__"] {
+    padding: rem(90px) 0;
+    text-align: center;
+
+    * {
+        color: #fff;
+    }
+    .area-info {
+        &-box {
+            margin-top: rem(70px);
+
+            @media (max-width: $tb-m) {
+                margin-top: rem(60px);
+            }
+        }
+        &-cont {
+            font-size: rem(28px);
+
+            small {
+                font-size: rem(20px);
+            }
+
+            @media (max-width: $tb-m) {
+                font-size: rem(24px);
+            }
+        }
+    }
+    
+    @media (max-width: $tb-m) {
+        padding: rem(60px) 0;
+    }
+}
+
+//플로팅 메뉴
+#floatMenu {
+    position: fixed;
+    top: rem(100px);
+    right: 2.5%;
+
+    li {
+        padding: rem(12px) 0;
+        width: rem(160px);
+
+        @media (max-width: $tb-m) {
+            padding: 0;
+            width: 33.33%;
+
+            & + li {
+                border-left: 1px solid $lavender;
+            }
+        }
+    }
+
+    @media (max-width: $tb-m) {
+        display: flex;
+        flex-wrap: wrap;
+        top: 0;
+        left: 0;
+        right: auto;
+        width: 100%;
+        box-shadow: 0 10px 0 #000;
+    }
+    @media (max-width: $mo-l) {
+        box-shadow: 0 5px 0 #000;
+    }
+}
+.float-menu {
+    display: block;
+    position: relative;
+    padding-bottom: 100%;
+    width: 100%;
+    height: 0;
+    background-color: $purple;
+    box-shadow: 5px 10px 0 #000;
+    border-radius: 100%;
+
+    .label {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 100%;
+        font-family: $body-bold-font;
+        font-size: rem(24px);
+        text-align: center;
+        color: #fff;
+
+        .logo {
+            display: block;
+            margin: 0 auto rem(10px);
+            width: 81.25%;
+
+            @media (max-width: $tb-m) {
+                display: inline-block;
+                margin: 0 5px 0 0;
+                width: 25%;
+                vertical-align: middle;
+            }
+            @media (max-width: $mo-l) {
+                display: block;
+                margin: 0 auto 8px;
+                width: 30%;
+            }
+        }
+        .arrow {
+            display: inline-block;
+            width: rem(12px);
+
+            @media (max-width: $mo-l) {
+                width: 6px;
+            }
+        }
+
+        @media (max-width: $mo-l) {
+            font-size: rem(20px);
+        }
+    }
+
+    @media (max-width: $tb-m) {
+        padding: 0;
+        height: rem(100px);
+        box-shadow: none;
+        border-radius: 0;
+    }
+    @media (max-width: $mo-l) {
+        height: rem(85px);
+    }
+}
+
+//히어로 영역
+.main-area__hero {
+
+    @include _background("main/hero-background-image.jpg", 50%, 50%);
+    background-size: cover;
+
+    .title {
+        padding: rem(30px) 0 rem(120px);
+
+        strong {
+            display: block;
+            font-size: 0;
+        }
+        span {
+            display: inline-block;
+            padding: rem(30px) rem(60px) rem(20px);
+            margin-top: rem(30px);
+            font-size: rem(72px);
+            background-color: $dark;
+
+            @media (max-width: $tb-m) {
+                font-size: rem(48px);
+            }
+            @media (max-width: $mo-l) {
+                padding: rem(25px) rem(50px) rem(20px);
+                margin-top: rem(15px);
+                font-size: rem(35px);
+            }
+        }
+
+        @media (max-width: $tb-m) {
+            padding: rem(45px) 0 rem(90px);
+        }
+        @media (max-width: $mo-s) {
+            padding: rem(20px) 0 rem(70px);
+        }
+    }
+    .text {
+        padding: rem(65px) 0 rem(85px);
+        font-size: rem(30px);
+        line-height: 1.35;
+
+        strong {
+            font-family: $body-bold-font;
+            color: #b9bcff;
+
+            * {
+                color: #b9bcff;
+            }
+        }
+
+        @media (max-width: $tb-m) {
+            font-size: rem(24px);
+        }
+    }
+
+}
+
+.countdown-wrap {
+    padding: rem(40px) rem(55px) rem(55px);
+    margin: 0 auto;
+    max-width: 1010px;
+    background-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 0 15px rgba(5, 5, 5, 0.15);
+    border-radius: rem(30px);
+
+    .sub-title {
+        position: relative;
+        font-size: rem(40px);
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            width: 19.5%;
+            height: 2px;
+            background-color: #fff;
+        }
+        &::before {
+            left: 4.5%;
+        }
+        &::after {
+            right: 4.5%;
+        }
+        span {
+            position: relative;
+            display: inline-block;
+        }
+
+        @media (max-width: $tb-m) {
+            font-size: rem(35px);
+
+            &::before,
+            &::after {
+                width: 22.5%;
+            }
+        }
+        @media (max-width: $tb-s) {
+            font-size: rem(30px);
+
+            &::before,
+            &::after {
+                width: 17.5%;
+            }
+        }
+        @media (max-width: $mo-s) {
+            font-size: rem(25px);
+
+            &::before,
+            &::after {
+                width: 15.5%;
+                height: 1px;
+            }
+        }
+    }
+    .time-box {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: rem(40px);
+
+        li {
+            margin-right: 8%;
+            width: 28%;
+
+            &:last-child {
+                margin-right: 0;
+
+                [class^="time__"]::after {
+                    display: none;
+                }
+            }
+        }
+    }
+    [class^="time__"] {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            right: -18%;
+            width: 8%;
+            height: 100%;
+            @include _background("main/hero-clock-colon.png", 50%, 50%);
+            background-size: 100%;
+        }
+        span {
+            display: block;
+            width: 48.5%;
+            height: rem(165px);
+            font-family: 'LABDigital', 'GmarketSansMedium', 'NotoSansKR', arial, sans-serif, Arial, dotum, '돋움';
+            font-size: rem(145px);
+            line-height: rem(165px);
+            color: #672968;
+            background-color: #fff;
+            border-radius: rem(15px);
+
+            @media (max-width: $tb-s) {
+                height: rem(145px);
+                font-size: rem(100px);
+                line-height: rem(145px);
+            }
+            @media (max-width: $mo-s) {
+                width: 48%;
+                height: rem(110px);
+                font-size: rem(80px);
+                line-height: rem(110px);
+            }
+        }
+    }
+    .time-unit {
+        display: block;
+        padding-top: rem(20px);
+        font-size: rem(30px);
+        
+        @media (max-width: $tb-m) {
+            font-size: rem(25px);
+        }
+        @media (max-width: $mo-s) {
+            font-size: rem(20px);
+        }
+    }
+
+    @media (max-width: $tb-s) {
+        padding: rem(30px) rem(25px) rem(45px);
+    }
+
+}
+
+//안내 영역
+.main-area__info {
+    background-size: cover;
+
+    .area-title-box {
+        * {
+            color: $lavender;
+        }
+        .title {
+            &::after {
+                background-color: $lavender;
+            }
+        }
+    }
+    &.event {
+        @include _background("main/event-background-image.jpg", 50%, 50%);
+        background-size: cover;
+
+        .event-step-box {
+            margin: 0 auto;
+            max-width: 700px;
+            text-align: left;
+            
+            li {
+                display: flex;
+                flex-wrap: wrap;
+    
+                & + li {
+                    padding-top: rem(30px);
+                }
+            }
+            .label {
+                display: inline-block;
+                width: rem(95px);
+                height: rem(35px);
+                font-family: $body-bold-font;
+                font-size: rem(20px);
+                line-height: rem(35px);
+                text-align: center;
+                color: $navy;
+                background-color: $lavender;
+                border-radius: 2rem;
+
+                @media (max-width: $mo-l) {
+                    width: 20%;
+                }
+            }
+            p {
+                padding-left: rem(25px);
+                width: calc(100% - 95px);
+                font-size: rem(28px);
+                line-height: 1.4;
+                box-sizing: border-box;
+
+                @media (max-width: $mo-l) {
+                    width: 80%;
+                    font-size: rem(25px);
+                }
+            }
+    
+        }
+        .event-check-box {
+            padding: rem(35px) rem(45px);
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: rem(30px);
+    
+            label {
+                display: block;
+                margin-bottom: rem(35px);
+                text-align: left;
+                cursor: pointer;
+            }
+            .text {
+                display: block;
+                position: relative;
+                padding-left: rem(45px);
+                line-height: 1.2;
+    
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: rem(25px);
+                    height: rem(25px);
+                    -webkit-transition: transform 0.15s cubic-bezier(.17,.67,.47,1.2);
+                    transition: transform 0.15s cubic-bezier(.17,.67,.47,1.2);
+                    background-color: #fff;
+                    border: 2px solid #c0c0c0;
+
+                    @media (max-width: $mo-l) {
+                        border-width: 1px;
+                    }
+                }
+            }
+            input[type="checkbox"] {
+                @include blind ();
+    
+                &:checked + .text {
+                    color: $lavender;
+                }
+                &:checked + .text::before {
+                    top: -5px;
+                    left: 5px;
+                    -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                    width: rem(12px);
+                    background-color: transparent;
+                    border-top: 0;
+                    border-left: 0;
+                    border-color: $lavender;
+                }
+            }
+
+            @media (max-width: $mo-l) {
+                padding: rem(45px) rem(30px) rem(25px);
+                border-radius: 15px;
+            }
+        }
+        .area-btn-wrap {
+            padding-top: rem(60px);
+        }
+    }
+    &.festa {
+        @include _background("main/festa-background-image.jpg", 50%, 50%);
+        background-size: cover;
+
+        figure {
+            margin: rem(30px) auto;
+            max-width: rem(570px);
+        }
+    }
+
+}

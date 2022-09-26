@@ -1,0 +1,52 @@
+// 레이아웃 inner
+.section-inner {
+  width: rem(1200px);
+  margin: 0 auto;
+  @media (max-width: $layoutSize + 40px) {
+    width: auto;
+    padding: 0 rem(20px);
+  }
+}
+
+// 헤더
+// #header {
+// }
+
+// 푸터
+#footer {
+  padding: rem(40px) 0;
+  background-color: #373737;
+}
+.footer-info-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 rem(60px);
+  
+  * {
+    color: #747474;
+  }
+  .copyright {
+    font-size: rem(17px);
+
+    @media (max-width: $tb-s) {
+      font-size: rem(15px);
+    }
+    @media (max-width: $mo-l) {
+      margin-bottom: 15px;
+    }
+  }
+  .btn {
+    padding: rem(10px) rem(15px);
+    font-size: rem(15px);
+    border-color: #747474;
+  }
+
+  @media (max-width: $tb-s) {
+    padding: 0;
+  }
+  @media (max-width: $mo-l) {
+    flex-direction: column;
+  }
+}
