@@ -40,6 +40,8 @@
     // ------------------------ ui 함수 실행 -----------------------------//
     // 슬라이드
     // sliderMaker();
+    // 응모하기 영역으로 이동
+    scrollToSumit();
   });
 
   // ------------------------ ui 함수 -----------------------------//
@@ -73,6 +75,11 @@
           slidesPerView: 'auto',
         },
       },
+    });
+  }
+  function scrollToSumit() {
+    $('#scrlToSubmit').on('click', function () {
+      scrollMoveTo('anchorSubmit', 100);
     });
   }
   // ------------------------ ui 함수 -----------------------------//
@@ -184,7 +191,7 @@
   }
 
   // 스크롤 이동 함수
-  function scorllMoveTo(id, between) {
+  function scrollMoveTo(id, between) {
     var offset = id ? $('#' + id).offset().top : 0;
     var _between = between ? between : 0;
     $('html, body').animate({scrollTop: offset - _between}, 300);
@@ -386,7 +393,7 @@
 
   function floatBtnTop() {
     $('.float-btn-top').on('click', function () {
-      scorllMoveTo();
+      scrollMoveTo();
     });
   }
 
