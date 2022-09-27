@@ -120,9 +120,13 @@
     padding: rem(80px) 0;
 
     .banner-list {
+        li {
+            background-color: #1c1539;
+        }
         a {
             display: block;
-            margin: rem(15px) 0;
+            margin: rem(15px) auto;
+            max-width: 784px;
         }
     }
 }
