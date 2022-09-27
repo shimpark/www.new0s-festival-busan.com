@@ -380,6 +380,7 @@
           changeMonth: true,
           changeYear: true,
           yearRange: '-80:+10',
+          dateFormat: 'yy.mm.dd',
           beforeShow: function () {
             $(this).addClass('open-datepicker');
           },
