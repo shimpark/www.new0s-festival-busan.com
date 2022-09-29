@@ -1024,4 +1024,6 @@ main { background-color: #672f96; }
 
 .policy-table td { line-height: 1.4; }
 
-.policy-table .point { font-family: "GmarketSansBold", "NotoSansKR", arial, sans-serif, Arial, dotum, "돋움"; }
+.policy-table .point { font-family: "GmarketSansBold", "NotoSansKR", arial, sans-serif, Arial, dotum, "돋움"; font-size: 0.86364rem; text-decoration: underline; }
+
+@media (max-width: 720px) { .policy-table .point { font-size: 1rem; } }

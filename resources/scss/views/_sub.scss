@@ -191,6 +191,12 @@
         }
         .point {
             font-family: $body-bold-font;
+            font-size: rem(19px);
+            text-decoration: underline;
+
+            @media (max-width: $mo-l) {
+                font-size: rem(22px);
+            }
         }
     }
 }
