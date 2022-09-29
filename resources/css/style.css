@@ -994,7 +994,9 @@ main { background-color: #672f96; }
 
 .history-area__banner { padding: 3.63636rem 0; }
 
-.history-area__banner .banner-list li { background-color: #1c1539; }
+.history-area__banner .banner-list li:first-child { background-color: #dcc1ed; }
+
+.history-area__banner .banner-list li:last-child { background-color: #1c1539; }
 
 .history-area__banner .banner-list a { display: block; margin: 0.68182rem auto; max-width: 784px; }
 

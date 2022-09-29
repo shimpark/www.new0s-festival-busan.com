@@ -121,7 +121,12 @@
 
     .banner-list {
         li {
-            background-color: #1c1539;
+            &:first-child {
+                background-color: #dcc1ed;
+            }
+            &:last-child {
+                background-color: #1c1539;
+            }
         }
         a {
             display: block;
